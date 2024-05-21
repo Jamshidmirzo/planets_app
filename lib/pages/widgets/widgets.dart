@@ -847,3 +847,34 @@ class appsetingitems extends StatelessWidget {
     );
   }
 }
+
+class Terms extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Text("""
+Terms and Conditions
+
+1. Introduction
+
+By using the Planets Application ("the App"), you agree to these Terms and Conditions ("Terms"). If you do not agree, do not use the App.
+
+2. Eligibility
+
+You must be at least 13 years old to use the App.
+
+3. License
+
+We grant you a non-exclusive, non-transferable, revocable license to use the App for personal, non-commercial purposes.
+
+4. User Accounts
+
+You may need to create an account to access certain features. You are responsible for the accuracy of your information and the security of your account.
+
+5. User Conduct
+
+You agree not to use the App for unlawful activities or in ways that could harm others. Prohibited actions include transmitting illegal content and spamming.
+
+We are not liable for any indirect, incidental, special, or consequential damages related to your use of the App.
+""");
+  }
+}

@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:planets_app/pages/register/loginpage.dart';
 import 'package:planets_app/pages/widgets/extensions.dart';
+import 'package:planets_app/pages/widgets/widgets.dart';
 
 class Registerpage extends StatefulWidget {
   const Registerpage({super.key});
@@ -206,7 +207,21 @@ class _RegisterpageState extends State<Registerpage> {
                 17.height(),
                 Center(
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: Column(
+                          children: [
+                            Terms(),
+                            ElevatedButton(
+                                onPressed: () {
+                                  ScaffoldMessenger.of(context)
+                                      .clearSnackBars();
+                                },
+                                child: Text('OK'))
+                          ],
+                        ),
+                      ));
+                    },
                     child: const Text(
                       'Terms and Conditions',
                       style: TextStyle(
